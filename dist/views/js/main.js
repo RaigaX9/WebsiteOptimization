@@ -404,9 +404,6 @@ var resizePizzas = function(size) {
             case "3":
                 document.querySelector("#pizzaSize").innerHTML = "Large";
                 return;
-            case "4":
-                document.querySelector("#pizzaSize").innerHTML = "XXL";
-                break;
             default:
                 console.log("bug in changeSliderLabel");
         }
@@ -430,8 +427,6 @@ var resizePizzas = function(size) {
                     return 0.3333;
                 case "3":
                     return 0.5;
-                case "4":
-                    return 0.8;
                 default:
                     console.log("bug in sizeSwitcher");
             }
@@ -453,8 +448,8 @@ var resizePizzas = function(size) {
         var pizzas = document.querySelectorAll(".randomPizzaContainer"),
             pizzalength = pizzas.length,
             width = pizzas[0].offsetWidth,
-            widthchange = width + dx + 'px',
-            dx = determineDx(pizzas[0], size);
+            dx = determineDx(pizzas[0], size),
+            widthchange = width + dx + 'px';
 
         //This for loop will give new widths to each pizza element based on 'pizzas'.
         for (var i = 0; i < pizzalength; i++) {
@@ -517,7 +512,7 @@ function updatePositions() {
     and store them into the length array. */
     for (var i = 0; i < 5; i++)
     {
-        updatepos[i] = 100 * Math.sin(scrolllength + (i % 5));
+        updatepos[i] = 100 * Math.sin(fitscroll + (i % 5));
     }
 
     //This will have it use the positions calculations from above.
