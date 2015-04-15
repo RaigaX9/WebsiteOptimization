@@ -12,19 +12,19 @@ After cloning the project, please do the following:
 
 - Next, install the following:
 
-- __grunt__: `npm install grunt --save-dev`
-
-- __grunt-contrib-copy__: `npm install grunt-contrib-copy --save-dev`
-
-- __grunt-contrib-cssmin__: `npm install grunt-contrib-cssmin --save-dev`
-
-- __grunt-contrib-htmlmin__: `npm install grunt-contrib-htmlmin --save-dev`
-
-- __grunt-contrib-uglify__: `npm install grunt-contrib-uglify --save-dev`
-
-- __grunt-processhtml__: `npm install grunt-processhtml --save-dev`
-
-- __grunt-usemin__: `npm install grunt-usemin --save-dev`
+    - __grunt__: `npm install grunt --save-dev`
+    
+    - __grunt-contrib-copy__: `npm install grunt-contrib-copy --save-dev`
+    
+    - __grunt-contrib-cssmin__: `npm install grunt-contrib-cssmin --save-dev`
+    
+    - __grunt-contrib-htmlmin__: `npm install grunt-contrib-htmlmin --save-dev`
+    
+    - __grunt-contrib-uglify__: `npm install grunt-contrib-uglify --save-dev`
+    
+    - __grunt-processhtml__: `npm install grunt-processhtml --save-dev`
+    
+    - __grunt-usemin__: `npm install grunt-usemin --save-dev`
 
 - Last, do `grunt build` and make sure there is no error.
 
