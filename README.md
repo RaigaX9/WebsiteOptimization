@@ -6,11 +6,11 @@ least 90 seconds or more.
 ## Instructions
 After cloning the project, please do the following:
 
-1. Install [Node.js](https://nodejs.org/)
+- Install [Node.js](https://nodejs.org/)
 
-2. After installing Node.js, go to the root directory for this project using the command prompt.
+- After installing Node.js, go to the root directory for this project using the command prompt.
 
-3. Next, install the following:
+- Next, install the following:
 
 - __grunt__: `npm install grunt --save-dev`
 
@@ -26,7 +26,7 @@ After cloning the project, please do the following:
 
 - __grunt-usemin__: `npm install grunt-usemin --save-dev`
 
-4. Last, do `grunt build` and make sure there is no error.
+- Last, do `grunt build` and make sure there is no error.
 
 ## Root files (index.html, project-2048.html, project-mobile.html, project-webperf)
 - For `style.css`, I've minimized it and put it in the `<style>` tags.
