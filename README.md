@@ -25,6 +25,8 @@ After cloning the project, please do the following:
     - __grunt-processhtml__: `npm install grunt-processhtml --save-dev`
     
     - __grunt-usemin__: `npm install grunt-usemin --save-dev`
+    
+    - __grunt-contrib-concat__: `npm install grunt-contrib-concat --save-dev`
 
 - Last, do `grunt build` and make sure there is no error.
 
@@ -34,7 +36,7 @@ After cloning the project, please do the following:
 - In `index.html`, added and reduced the size for `pizzeria3.jpg` to increase optimization for the image.
 - Deleted extra empty lines.
 
-## dist/views (Pizzeria files)
+## src/views (Pizzeria files)
 - `pizza.html`:
     - I've deleted extra empty lines.
     - Added and reduced the size of `pizzeria2.jpg` to increase optimization.

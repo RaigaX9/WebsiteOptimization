@@ -5,8 +5,9 @@ module.exports = function(grunt) {
         cssmin: {
             views: {
                 files: {
-                    'views/css/site.tidy.min.css': ['dist/views/css/style.css', 'dist/views/css/bootstrap-grid.css'],
-                    'css/style.min.css': ['dist/css/style.css']
+                    'views/css/site.tidy.min.css': ['src/views/css/style.css', 'src/views/css/bootstrap-grid.css'],
+                    'css/style.min.css': ['src/css/style.css'],
+                    'css/print.min.css': ['src/css/print.css']
                 }
             }
         },
@@ -31,10 +32,10 @@ module.exports = function(grunt) {
         },
         useminPrepare: {
             html: [
-                'dist/index.html',
-                'dist/project-2048.html',
-                'dist/project-mobile.html',
-                'dist/project-webperf.html'
+                'src/index.html',
+                'src/project-2048.html',
+                'src/project-mobile.html',
+                'src/project-webperf.html'
             ],
             options: {
                 dest: '.'
@@ -51,12 +52,12 @@ module.exports = function(grunt) {
         copy: {
             task0: {
                 files: [
-                    {expand:true, cwd: 'dist/img/', src:['**'], dest: 'img/'},
-                    {expand:true, cwd: 'dist/views/images/', src:['**'], dest: 'views/images/'},
-                    {src:'dist/index.html', dest:'index.html'},
-                    {src:'dist/project-2048.html', dest:'project-2048.html'},
-                    {src:'dist/project-mobile.html', dest:'project-mobile.html'},
-                    {src:'dist/project-webperf.html', dest:'project-webperf.html'}
+                    {expand:true, cwd: 'src/img/', src:['**'], dest: 'img/'},
+                    {expand:true, cwd: 'src/views/images/', src:['**'], dest: 'views/images/'},
+                    {src:'src/index.html', dest:'index.html'},
+                    {src:'src/project-2048.html', dest:'project-2048.html'},
+                    {src:'src/project-mobile.html', dest:'project-mobile.html'},
+                    {src:'src/project-webperf.html', dest:'project-webperf.html'}
 
                 ]
             }
@@ -64,12 +65,12 @@ module.exports = function(grunt) {
         uglify: {
             js:{
                 files: {
-                    'js/perfmatters.min.js': ['dist/js/perfmatters.js']
+                    'js/perfmatters.min.js': ['src/js/perfmatters.js']
                 }
             },
             views: {
                 files: {
-                    'views/js/main.min.js': ['dist/views/js/main.js']
+                    'views/js/main.min.js': ['src/views/js/main.js']
 
                 }
             }
@@ -77,7 +78,7 @@ module.exports = function(grunt) {
         processhtml: {
             views: {
                 files: {
-                    'views/pizza.html': ['dist/views/pizza.html']
+                    'views/pizza.html': ['src/views/pizza.html']
                 }
             }
         }
@@ -90,6 +91,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     //Build tasks
     grunt.registerTask('build', [
@@ -99,7 +101,8 @@ module.exports = function(grunt) {
         'uglify',
         'usemin',
         'processhtml',
-        'htmlmin'
+        'htmlmin',
+        'concat'
     ]);
 
 };
